@@ -29,6 +29,10 @@ body {
    - color: #5c4a3a
    ============================================================ */
 
+p {
+  color: #5c4a3a;
+}
+
 /* ============================================================
    TODO 2 — Selector de CLASE
    Los párrafos (y listas) con clase .destacado deben tener:
@@ -37,6 +41,11 @@ body {
    Pregunta: esta regla también usa `color`, igual que el
    TODO 1. ¿Quién gana y por qué?
    ============================================================ */
+
+.destacado {
+  color: #2a9d8f;
+  font-weight: bold;
+}
 
 /* ============================================================
    TODO 3 — Selector de ID
@@ -48,11 +57,26 @@ body {
    - color: #7a4b00
    ============================================================ */
 
+#titulo-principal {
+  color: #d62828;
+  text-align: center;
+}
+#aviso {
+  background-color: #ffd166;
+  color: #7a4b00;
+  border-radius: 5px;
+}
+
 /* ============================================================
    TODO 4 — Selectores AGRUPADOS
    Con UNA sola regla (separando con coma), dale a h1 y h2:
    - font-family: Georgia, "Times New Roman", serif
    ============================================================ */
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
 
 /* ============================================================
    TODO 5 — Selectores ANIDADOS
@@ -61,6 +85,9 @@ body {
    Después probá escribir la regla solo con li (sin .menu) y
    mirá la página. ¿Cambió algo? ¿Por qué?
    ============================================================ */
+.menu li {
+  font-size: 18px;
+}
 
 /* ============================================================
     DESAFÍO DE ESPECIFICIDAD — respondé antes de mirar el
