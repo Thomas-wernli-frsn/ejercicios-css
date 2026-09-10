@@ -31,12 +31,24 @@ body {
   border-radius: 6px;
 }
 
-.obra:nth-child(1) .lienzo { background: linear-gradient(135deg, #f59e0b, #ef4444); }
-.obra:nth-child(2) .lienzo { background: linear-gradient(135deg, #94a3b8, #475569); }
-.obra:nth-child(3) .lienzo { background: linear-gradient(135deg, #fde047, #f59e0b); }
-.obra:nth-child(4) .lienzo { background: linear-gradient(135deg, #e2e8f0, #94a3b8); }
-.obra:nth-child(5) .lienzo { background: linear-gradient(135deg, #1e3a8a, #7c3aed); }
-.obra:nth-child(6) .lienzo { background: linear-gradient(135deg, #f97316, #b45309); }
+.obra:nth-child(1) .lienzo {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+.obra:nth-child(2) .lienzo {
+  background: linear-gradient(135deg, #94a3b8, #475569);
+}
+.obra:nth-child(3) .lienzo {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+}
+.obra:nth-child(4) .lienzo {
+  background: linear-gradient(135deg, #e2e8f0, #94a3b8);
+}
+.obra:nth-child(5) .lienzo {
+  background: linear-gradient(135deg, #1e3a8a, #7c3aed);
+}
+.obra:nth-child(6) .lienzo {
+  background: linear-gradient(135deg, #f97316, #b45309);
+}
 
 .obra h2 {
   font-size: 18px;
@@ -58,6 +70,13 @@ body {
    escribís repeat(6, 1fr)?
    ============================================================ */
 
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
 /* ============================================================
    TODO 2 — Las tarjetas de las obras
    A .obra dale:
@@ -66,6 +85,12 @@ body {
    - border-radius: 8px
    - padding: 16px
    ============================================================ */
+.obra {
+  background-color: white;
+  border: 1px solid #e0d9cc;
+  border-radius: 8px;
+  padding: 16px;
+}
 
 /* ============================================================
    TODO 3 — La obra destacada

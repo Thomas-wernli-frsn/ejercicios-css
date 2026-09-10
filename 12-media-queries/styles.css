@@ -40,10 +40,18 @@ body {
   border-radius: 6px;
 }
 
-.tarjeta:nth-child(1) .emoji { background: linear-gradient(135deg, #b45309, #78350f); }
-.tarjeta:nth-child(2) .emoji { background: linear-gradient(135deg, #fbbf24, #d97706); }
-.tarjeta:nth-child(3) .emoji { background: linear-gradient(135deg, #f9a8d4, #db2777); }
-.tarjeta:nth-child(4) .emoji { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+.tarjeta:nth-child(1) .emoji {
+  background: linear-gradient(135deg, #b45309, #78350f);
+}
+.tarjeta:nth-child(2) .emoji {
+  background: linear-gradient(135deg, #fbbf24, #d97706);
+}
+.tarjeta:nth-child(3) .emoji {
+  background: linear-gradient(135deg, #f9a8d4, #db2777);
+}
+.tarjeta:nth-child(4) .emoji {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
 
 .tarjeta {
   background-color: #ffffff;
@@ -82,6 +90,28 @@ body {
    - gap: 16px
    - padding: 24px
    ============================================================ */
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #3e2b23;
+  color: white;
+}
+.links {
+  display: flex;
+  gap: 16px;
+}
+.links a {
+  color: white;
+}
+
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 24px;
+}
 
 /* ============================================================
    TODO 2 — Tableta (hasta 900px)
@@ -91,6 +121,14 @@ body {
    - .hero h1  font-size: 28px
    Abrí el navegador y achicá la ventana para verlo funcionar.
    ============================================================ */
+@media (width <= 900px) {
+  .tarjetas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h1 {
+    font-size: 28px;
+  }
+}
 
 /* ============================================================
    TODO 3 — Celular (hasta 600px)
@@ -99,6 +137,18 @@ body {
    - .barra  flex-direction: column y gap: 8px
    - .nota  text-align: center
    ============================================================ */
+@media (max-width: 600px) {
+  .tarjetas {
+    grid-template-columns: 1fr;
+  }
+  .barra {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .nota {
+    text-align: center;
+  }
+}
 
 /* ============================================================
     PARA PENSAR
@@ -106,3 +156,5 @@ body {
    de 900px en el archivo? (Pista: cuando las dos condiciones
    se cumplen a la vez, ¿qué gana según la cascada?)
    ============================================================ */
+/* 
+   la mas chica va despues por la regla cascada */
