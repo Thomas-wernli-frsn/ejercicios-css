@@ -100,6 +100,11 @@ body {
    reacomodan las demás obras solas.
    ============================================================ */
 
+.destacada {
+  grid-column: span 2;
+  /* grid-row: span 2; */
+}
+
 /* ============================================================
    TODO 4 — Experimento responsive
    Cambiá las columnas de la grilla por:
