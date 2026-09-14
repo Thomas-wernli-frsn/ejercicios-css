@@ -37,14 +37,17 @@ body {
   font-family: system-ui, sans-serif;
   background-color: #eef2f5;
   color: #1f2933;
+  margin: 10px 10px;
 }
 
 .barra {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
   background-color: #0f3d3e;
   color: #ffffff;
+  border-radius: 8px;
 }
 
 .logo {
@@ -53,12 +56,14 @@ body {
 }
 
 .links {
-  gap: 16px;
+  display: flex;
+  gap: 20px;
 }
 
 .links a {
   color: #9ad1c9;
   text-decoration: none;
+  right: 10px;
 }
 
 .titulo {
@@ -67,6 +72,8 @@ body {
 }
 
 .clases {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 16px;
   padding: 16px 24px;
@@ -75,8 +82,9 @@ body {
 .clase {
   display: flex;
   align-items: center;
+  flex-direction: column;
   flex: 1 1 200px;
-  background-color: #ffffff;
+  background-color: #999999;
   border: 1px solid #d7dee3;
   border-radius: 10px;
   padding: 20px;
@@ -91,10 +99,18 @@ body {
   margin-bottom: 12px;
 }
 
-.clase:nth-child(1) .icono { background-color: #0f3d3e; }
-.clase:nth-child(2) .icono { background-color: #e07a5f; }
-.clase:nth-child(3) .icono { background-color: #3d7ea6; }
-.clase:nth-child(4) .icono { background-color: #8e6c88; }
+.clase:nth-child(1) .icono {
+  background-color: #0f3d3e;
+}
+.clase:nth-child(2) .icono {
+  background-color: #e07a5f;
+}
+.clase:nth-child(3) .icono {
+  background-color: #3d7ea6;
+}
+.clase:nth-child(4) .icono {
+  background-color: #8e6c88;
+}
 
 .clase h2 {
   font-size: 1.15rem;
@@ -110,4 +126,5 @@ body {
   padding: 16px 24px;
   background-color: #0f3d3e;
   color: #cbd5d1;
+  border-radius: 8px;
 }
