@@ -4,9 +4,10 @@
    ============================================================
    La panadería estrenó su página de precios y "se ve rara".
    Este archivo tiene 4 bugs. La página debería verse como
-   referencia.svg: la columna centrada, el encabezado y las
-   tarjetas del mismo ancho, la etiqueta prolija y el título
-   de la cabecera con un tamaño estable.
+   referencia.svg: 
+   -la columna centrada
+   -el encabezado y las tarjetas del mismo ancho
+   -la etiqueta prolija y el título de la cabecera con un tamaño estable.
 
    Acá no hay TODOs: encontrar y arreglar los bugs es tu trabajo.
 
@@ -25,7 +26,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -33,10 +34,15 @@ body {
   background-color: #faf4ec;
   color: #2b2118;
   padding: 24px;
+  flex-direction: column;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
 
 .panaderia {
   max-width: 640px;
+  margin: 0 auto;
 }
 
 .cabecera {
@@ -47,7 +53,7 @@ body {
 }
 
 .logo {
-  font-size: 4vw;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -81,7 +87,7 @@ body {
   position: absolute;
   top: -10px;
   right: 12px;
-  width: 70px;
+  /* width: 98px; */
   background-color: #e8a33d;
   color: #3b2a12;
   font-size: 0.8rem;
@@ -93,5 +99,4 @@ body {
   text-align: center;
   font-size: 0.85rem;
   color: #7a6a5a;
-  padding-top: 1rem;
 }
