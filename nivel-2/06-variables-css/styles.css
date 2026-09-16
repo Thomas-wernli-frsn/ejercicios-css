@@ -33,7 +33,9 @@
   --color-fondo: #f4f7f2;
   --color-texto: #22301f;
   --color-texto-suave: #6f7d6a;
-  --espacio: 16;
+  --espacio: 16px;
+  --radio: 10px;
+  --color-acento: #a5a00d;
 }
 
 * {
@@ -60,7 +62,6 @@ body {
 }
 
 .catalogo {
-  --radio: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -81,7 +82,7 @@ body {
 }
 
 .detalle {
-  color: var(--texto-suave);
+  color: var(--color-texto-suave);
   font-size: 0.9rem;
 }
 
