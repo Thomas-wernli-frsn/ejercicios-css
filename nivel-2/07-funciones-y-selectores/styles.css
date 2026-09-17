@@ -16,8 +16,6 @@
    1. Abrí index.html y comparalo con referencia.svg.
    2. En DevTools, una propiedad escrita mal aparece tachada o con
       un triángulo de advertencia. Ese es el mejor punto de partida.
-   3. Para `:has()`: probá en la consola `document.querySelectorAll(".plan:has(.etiqueta)")`
-      para ver cuántos elementos matchean.
    4. Arreglá de a un bug por vez.
 
    Reglas: solo editás styles.css. No toques el HTML.
@@ -42,7 +40,7 @@ body {
 }
 
 .titulo {
-  font-size: clamp(3rem, 4vw, 1.75rem);
+  font-size: clamp(1.75rem, 4vw, 3rem);
 }
 
 .bajada {
@@ -63,20 +61,26 @@ body {
 }
 
 .video {
-  width: calc(33.333%-14px);
+  width: calc(33.333% - 14px);
   min-width: 240px;
   margin: 0;
 }
 
 .pantalla {
-  aspect-ratio: 16:9;
+  aspect-ratio: 16/9;
   border-radius: 10px;
   margin-bottom: 8px;
 }
 
-.video:nth-child(1) .pantalla { background: linear-gradient(135deg, #3a7d5d, #8fbf9f); }
-.video:nth-child(2) .pantalla { background: linear-gradient(135deg, #7a5c3e, #c9a877); }
-.video:nth-child(3) .pantalla { background: linear-gradient(135deg, #6b5b8e, #b6a6d6); }
+.video:nth-child(1) .pantalla {
+  background: linear-gradient(135deg, #3a7d5d, #8fbf9f);
+}
+.video:nth-child(2) .pantalla {
+  background: linear-gradient(135deg, #7a5c3e, #c9a877);
+}
+.video:nth-child(3) .pantalla {
+  background: linear-gradient(135deg, #6b5b8e, #b6a6d6);
+}
 
 figcaption {
   font-size: 0.85rem;
@@ -114,6 +118,7 @@ figcaption {
   border-radius: 4px;
 }
 
-.plan:has(.precio) {
+.plan:has(.etiqueta) {
   border: 2px solid #c0392b;
+  display: flexbox;
 }
